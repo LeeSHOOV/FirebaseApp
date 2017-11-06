@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:layout_width="60dp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/item_nameTextView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="LEE"
+                android:textAlignment="center"
+                android:textSize="12sp"
+                tools:layout_editor_absoluteX="1dp"
+                tools:layout_editor_absoluteY="0dp" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="80dp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/item_workingTimeTextView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="25h 23m"
+                android:textAlignment="center"
+                android:textSize="12sp"
+                tools:layout_editor_absoluteX="70dp"
+                tools:layout_editor_absoluteY="1dp" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="150dp"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/item_onWorkDateTextView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="2017/01/01(Tue) 16:59"
+                android:textSize="12sp"
+                tools:layout_editor_absoluteX="144dp"
+                tools:layout_editor_absoluteY="0dp" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/modifyOnWorkDate_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/colorAccent"
+                android:text="出勤修正"
+                android:textColor="@color/common_google_signin_btn_text_dark_default"
+                android:textSize="10sp"
+                tools:layout_editor_absoluteX="294dp"
+                tools:layout_editor_absoluteY="0dp" />
+        </FrameLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:layout_width="60dp"
+            android:layout_height="wrap_content">
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="80dp"
+            android:layout_height="wrap_content">
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="150dp"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/item_offWorkDateTextView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="2017/01/01(Tue) 16:59"
+                android:textSize="12sp"
+                tools:layout_editor_absoluteX="144dp"
+                tools:layout_editor_absoluteY="0dp" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/modifyOffWorkDate_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/holo_blue_light"
+                android:text="退勤修正"
+                android:textColor="@color/common_google_signin_btn_text_dark_default"
+                android:textSize="10sp"
+                tools:layout_editor_absoluteX="294dp"
+                tools:layout_editor_absoluteY="0dp" />
+        </FrameLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#ABABAB" />
+    </LinearLayout>
+</LinearLayout>

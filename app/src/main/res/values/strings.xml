@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">HowlFirebaseAuth</string>
+    <string name="title_activity_home">HomeActivity</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+    <string-array name="spinnerArray">
+        <item>Select your position.</item>
+        <item>Staff</item>
+        <item>CEO</item>
+        <item>Admin</item>
+    </string-array>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_check_in_out">CheckInOutActivity</string>
+    <string name="title_activity_info_table">InfoTableActivity</string>
+    <string name="title_activity_calendar">CalendarActivity</string>
+</resources>
