@@ -115,6 +115,7 @@ public class CheckInOutPresenter {
             public void onDataChange(DataSnapshot dataSnapshot) {
                 searchMember = dataSnapshot.getValue(Member.class);
                 mView.updateAlertDialogUI(searchMember.isWorkingFlag(), OutputCurrentDateToString()+" "+OutputCurrentTimeToString());
+                
             }
 
             @Override
@@ -361,8 +362,8 @@ public class CheckInOutPresenter {
 
     public void displayImageDialog(){
 
-        final StorageReference storageReference = FirebaseStorage.getInstance().getReferenceFromUrl("gs://howlfirebaseauth-24336.appspot.com");
-        final StorageReference riversRef = storageReference.child("imageList/checkIn/dog.jpg");
+        final StorageReference storageReference = FirebaseStorage.getInstance().getReferenceFromUrl("gs://howlfirebaseauth-c0df8.appspot.com/");
+        final StorageReference riversRef = storageReference.child("images/checkInImages/dog.jpg");
         riversRef.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
             @Override
             public void onSuccess(Uri uri) {
@@ -375,14 +376,14 @@ public class CheckInOutPresenter {
                         Uri selectedImageUri;
 
                         Uri imageURI[] = new Uri[7];
-                        imageURI[0] = Uri.parse("https://firebasestorage.googleapis.com/v0/b/howlfirebaseauth-24336.appspot.com/o/imageList%2FcheckIn%2Fdog.jpg?alt=media&token=07a4a407-2d8c-412b-8d39-ce151482e33b");
-                        imageURI[1] = Uri.parse("https://firebasestorage.googleapis.com/v0/b/howlfirebaseauth-24336.appspot.com/o/imageList%2FcheckIn%2F036-pictogram-free.jpg?alt=media&token=75137f3e-3b98-4a70-82c3-532e883c2f8f");
-                        imageURI[2] = Uri.parse("https://firebasestorage.googleapis.com/v0/b/howlfirebaseauth-24336.appspot.com/o/imageList%2FcheckIn%2Fshukkin-tate.jpg?alt=media&token=c7723091-897d-47af-b0a1-cb5f4ecbf408");
+                        imageURI[0] = Uri.parse("https://firebasestorage.googleapis.com/v0/b/howlfirebaseauth-c0df8.appspot.com/o/images%2FcheckInImages%2F036-pictogram-free.jpg?alt=media&token=bfc24192-ad3b-4ee1-8130-960eca1301a5");
+                        imageURI[1] = Uri.parse("https://firebasestorage.googleapis.com/v0/b/howlfirebaseauth-c0df8.appspot.com/o/images%2FcheckInImages%2Fdog.jpg?alt=media&token=57cb8703-0415-45ad-a4e1-40ee4a2d78e9");
+                        imageURI[2] = Uri.parse("https://firebasestorage.googleapis.com/v0/b/howlfirebaseauth-c0df8.appspot.com/o/images%2FcheckInImages%2Fshukkin-tate.jpg?alt=media&token=fa1a67d0-8917-4cc8-9bb9-b37d9507eb8e");
 
-                        imageURI[3] = Uri.parse("https://firebasestorage.googleapis.com/v0/b/howlfirebaseauth-24336.appspot.com/o/imageList%2FcheckOut%2Fdog2.jpg?alt=media&token=f042b32f-69d9-4ac7-ae13-955a04f3bcca");
-                        imageURI[4] = Uri.parse("https://firebasestorage.googleapis.com/v0/b/howlfirebaseauth-24336.appspot.com/o/imageList%2FcheckOut%2F085.png?alt=media&token=ccf8edea-bd79-4a11-8c9d-cd764152a0a4");
-                        imageURI[5] = Uri.parse("https://firebasestorage.googleapis.com/v0/b/howlfirebaseauth-24336.appspot.com/o/imageList%2FcheckOut%2F20150713114655.png?alt=media&token=befb5bdb-0730-4804-83f8-414bd1281762");
-                        imageURI[6] = Uri.parse("https://firebasestorage.googleapis.com/v0/b/howlfirebaseauth-24336.appspot.com/o/imageList%2FcheckOut%2F20160712.2.02.jpg?alt=media&token=a2449be9-d843-4246-acc8-736d83f9dc49");
+                        imageURI[3] = Uri.parse("https://firebasestorage.googleapis.com/v0/b/howlfirebaseauth-c0df8.appspot.com/o/images%2FcheckOutImages%2F085.png?alt=media&token=2b2f97c4-3b23-48bc-a565-7289cda70587");
+                        imageURI[4] = Uri.parse("https://firebasestorage.googleapis.com/v0/b/howlfirebaseauth-c0df8.appspot.com/o/images%2FcheckOutImages%2F20150713114655.png?alt=media&token=e3a2622b-9ec2-42ba-a2b9-613c350e612c");
+                        imageURI[5] = Uri.parse("https://firebasestorage.googleapis.com/v0/b/howlfirebaseauth-c0df8.appspot.com/o/images%2FcheckOutImages%2F20160712.2.02.jpg?alt=media&token=bac10957-d4fa-4c69-99ef-261ca6164f20");
+                        imageURI[6] = Uri.parse("https://firebasestorage.googleapis.com/v0/b/howlfirebaseauth-c0df8.appspot.com/o/images%2FcheckOutImages%2Fdog2.jpg?alt=media&token=35cddacd-c186-4e96-b9f1-f1c4c591b86f");
 
                         Random random = new Random();
                         int x = random.nextInt(3);

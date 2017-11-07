@@ -1,6 +1,7 @@
 package com.test.HowlFirebaseAuth.Presenter;
 
 import android.support.annotation.NonNull;
+import android.util.Log;
 
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -47,14 +48,35 @@ public class LoginPresenter implements com.test.HowlFirebaseAuth.LoginContract.P
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
                 FirebaseUser user = firebaseAuth.getCurrentUser();
 
-                if(user == null) {
+                if(user != null) {
+                    //接続状態
+                    userService.getUserByEmail(FirebaseAuth.getInstance().getCurrentUser().getUid())
+                            .addListenerForSingleValueEvent(new ValueEventListener() {
+                                @Override
+                                public void onDataChange(DataSnapshot dataSnapshot) {
+                                    searchMember = dataSnapshot.getValue(Member.class);
+                                    if(searchMember != null){
+                                        //mView.showHomeActivity();
+                                    }else{
+                                        Member member = new Member();
+                                        member.setKey(FirebaseAuth.getInstance().getCurrentUser().getUid());
+                                        member.setMemberEmail(FirebaseAuth.getInstance().getCurrentUser().getEmail());
+                                        member.setWorkingFlag(false);
+                                        userService.createMember(member);
+                                        //mView.showHomeActivity();
+                                    }
+
+                                    mView.showHomeActivity();
+                                }
+                                @Override
+                                public void onCancelled(DatabaseError databaseError) {
+
+                                }
+                            });
+                } else {
                     //Logoutされた時
                     firebaseAuth.signOut();
                     //activity.showLoginActivity();
-                } else {
-                    //接続状態
-                    //processLogin(user);
-                    mView.showHomeActivity();
                 }
             }
         };
@@ -77,6 +99,8 @@ public class LoginPresenter implements com.test.HowlFirebaseAuth.LoginContract.P
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
+                            Log.d("TAG", "SUCCESS");
+
 
                             userService.getUserByEmail(FirebaseAuth.getInstance().getCurrentUser().getUid())
                                     .addListenerForSingleValueEvent(new ValueEventListener() {
@@ -99,6 +123,7 @@ public class LoginPresenter implements com.test.HowlFirebaseAuth.LoginContract.P
 
                                 }
                             });
+
 
 
                         } else {

@@ -1,27 +1,27 @@
 {
   "project_info": {
-    "project_number": "604218021505",
-    "firebase_url": "https://howlfirebaseauth-24336.firebaseio.com",
-    "project_id": "howlfirebaseauth-24336",
-    "storage_bucket": "howlfirebaseauth-24336.appspot.com"
+    "project_number": "240885652880",
+    "firebase_url": "https://howlfirebaseauth-c0df8.firebaseio.com",
+    "project_id": "howlfirebaseauth-c0df8",
+    "storage_bucket": "howlfirebaseauth-c0df8.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:604218021505:android:a7e6f11bba5f400a",
+        "mobilesdk_app_id": "1:240885652880:android:a7e6f11bba5f400a",
         "android_client_info": {
           "package_name": "com.test.HowlFirebaseAuth"
         }
       },
       "oauth_client": [
         {
-          "client_id": "604218021505-dsuh2h07c7k811pk51e2kbdr31asbmuh.apps.googleusercontent.com",
+          "client_id": "240885652880-10pe4tkadpfvbkr4mp58fheloqq699lt.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyCb_oJUClbfqr78X8mDFsX1la8i1OpFfeI"
+          "current_key": "AIzaSyDBM_fpCxCtFawJ8RJFqfHqxcc4qccljqQ"
         }
       ],
       "services": {
