@@ -115,7 +115,7 @@ public class CheckInOutPresenter {
             public void onDataChange(DataSnapshot dataSnapshot) {
                 searchMember = dataSnapshot.getValue(Member.class);
                 mView.updateAlertDialogUI(searchMember.isWorkingFlag(), OutputCurrentDateToString()+" "+OutputCurrentTimeToString());
-                
+
             }
 
             @Override

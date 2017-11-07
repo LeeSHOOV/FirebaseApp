@@ -1,5 +1,6 @@
 package com.test.HowlFirebaseAuth.ValueObject;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -13,6 +14,7 @@ public class Member {
     private String name;
     private String position;
     private boolean workingFlag;
+    private ArrayList<String> chatRoomInfoRefereceKeyList;
 
     public String getKey() {
         return key;
@@ -54,6 +56,14 @@ public class Member {
         this.workingFlag = workingFlag;
     }
 
+    public ArrayList<String> getChatRoomInfoRefereceKeyList() {
+        return chatRoomInfoRefereceKeyList;
+    }
+
+    public void setChatRoomInfoRefereceKeyList(ArrayList<String> chatRoomInfoRefereceKeyList) {
+        this.chatRoomInfoRefereceKeyList = chatRoomInfoRefereceKeyList;
+    }
+
     public Map<String, Object> toMap(){
         HashMap<String, Object> result = new HashMap<>();
         result.put("key", key);
@@ -61,7 +71,7 @@ public class Member {
         result.put("name", name);
         result.put("position", position);
         result.put("workingFlag", workingFlag);
-
+        result.put("chatRoomInfoRefereceKeyList", chatRoomInfoRefereceKeyList);
         return result;
     }
 
@@ -73,6 +83,7 @@ public class Member {
                 ", name='" + name + '\'' +
                 ", position='" + position + '\'' +
                 ", workingFlag=" + workingFlag +
+                ", chatRoomInfoRefereceKeyList=" + chatRoomInfoRefereceKeyList +
                 '}';
     }
 }
